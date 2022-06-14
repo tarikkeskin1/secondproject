@@ -14,6 +14,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.validator.constraints.Length;
 
 /**
  * A user.
@@ -33,6 +34,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Pattern(regexp = Constants.LOGIN_REGEX)
     @Size(min = 1, max = 50)
     @Column(length = 50, unique = true, nullable = false)
+    @Length(max=100)
     private String login;
 
     @JsonIgnore
