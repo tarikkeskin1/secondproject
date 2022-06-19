@@ -1,0 +1,10 @@
+package com.tr.pia.secondproject.domain.enumeration;
+
+/**
+ * The Language enumeration.
+ */
+public enum Language {
+    FRENCH,
+    ENGLISH,
+    SPANISH,
+}
